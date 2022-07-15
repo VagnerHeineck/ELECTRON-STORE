@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Stoke" rel="stylesheet">
+		<title>ElECTRON STORE - BUY</title>
+		<script language=javascript type="text/javascript" src="ELECTRON_Javascript.js"></script>
+		<link rel="stylesheet" type="text/css" href="ELECTRON_CSS.CSS">
+
+	</head>
+<body>
+<header>
+	<img class="imgLogo" src="Electron_Topo.png">
+	<address>
+		<font face="liberation,verdana">
+			Rua da Constituição, 123 
+			<br/>
+			Tel: (21) 91234-5678 
+			<br/>
+			<a href="mailto:contact@elektron.com.br">contact@elektron.com.br</a>
+			<br/>
+		</font>
+	</address>
+</header>
+<br/>
+<nav>
+	<ul  class="menu">
+		<li class="botão">
+			<a target="_blank" href="MAIN_PAGE.HTML">MAIN PAGE</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="LABPRODUCTS.HTML">LAB PRODUCTS</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="PRODUCTS.HTML">PRODUCTS</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="BUY.HTML">BUY</a>
+		</li>
+	</ul>
+</nav>
+<section>
+	<br/>
+	<form method="POST" action="COMPRAS_Q6.htm">
+		<fieldset>
+			<legend>Selected Products and Buying List</legend>
+			<textarea readonly type="text" name="txtLista" class="listaCompras"></textarea>
+			<fieldset>
+				<legend>Selecionado</legend>
+
+					<label for="produto" class="colLabSelProd">
+						Produto:
+						<select name="selProduto" id="produto" class="colSelProd" onChange="selecProd(this);">
+							<option>---</option>
+								<optgroup label="Products">
+									<option>Protoboard</option>
+									<option>Leds</option>
+									<option>Capacitors</option>
+								</optgroup>
+								<optgroup label="Lab Products">
+									<option>Oscilloscopes</option>
+									<option>DC Power Supply</option>
+									<option>Multimeters</option>
+								</optgroup>
+						</select>
+					</label>
+					<label for="Dimensões" class="colLabSelProd">
+					Dimensões:
+					<select name="selTamanho" id="tamanho" class="colSelProd"  onChange="selecTam(this);">
+						<option>---</option>
+						<option>Nano</option>
+						<option>Micro</option>
+						<option>Mili</option>
+						<option>Small</option>
+						<option>Normal</option>
+						<option>Large</option>
+					</select>
+					</label>
+					<label for="cor" class="colLabSelProd">
+					Cor:
+					<select name="selCor" id="cor" class="colSelProd"  onChange="selecCor(this);">
+						<option>---</option>
+						<option>Azul</option>
+						<option>Verde</option>
+						<option>Amarelo</option>
+					</select>
+					</label>
+					<input type="text" name="txtDesc" class="linhaProdSel" readonly/>
+					<div>
+						<label class="elemDir" for="txtPreco">R$<input type="text" name="txtPreco" class="impMedio" readonly></label>
+						<label class="elemEsq" for="comprar"><input type="button" name="comprar" value="Comprar"  onClick="CompraItem(this.form);"/></label>
+					</div>
+
+			</fieldset>
+			<br/>
+			<label class="elemDir" for="valtot">Total R$ <input type="text" id="valtot" name="txtValtot" class="impMedio" readonly></label>
+		</fieldset>
+		<div class="botoes">
+			<input type="submit" value="Continuar" />
+			<input type="reset" value="Limpar"/>
+		</div>
+	</form>
+</section>
+</body>
+</html>
