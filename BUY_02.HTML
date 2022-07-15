@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Stoke" rel="stylesheet">
+		<title>ELECTRON - IDENTIFICATION </title>
+		<!--<base target="_blank" />-->
+		<link rel="stylesheet" type="text/css" href="ELECTRON_CSS.CSS">
+		<script language=javascript type="text/javascript" src="Electron_Javascript.js"></script>
+	</head>
+<body>
+<header>
+	<img class="imgLogo" src="Electron_Topo.png">
+	<address>
+		<font face="liberation,verdana">
+			Rua da Constituição, 123 
+			<br/>
+			Tel: (21) 91234-5678 
+			<br/>
+			<a href="mailto:contact@elektron.com.br">contact@elektron.com.br</a>
+			<br/>
+		</font>
+	</address>
+</header>
+<br/>
+<nav>
+	<ul  class="menu">
+		<li class="botão">
+			<a target="_blank" href="MAIN_PAGE.HTML">MAIN PAGE</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="LABPRODUCTS.HTML">LAB PRODUCTS</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="PRODUCTS.HTML">PRODUCTS</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="BUY.HTML">BUY</a>
+		</li>
+	</ul>
+</nav>
+<section>
+	<br/>
+	<form method="POST">
+		<fieldset  class="fsEsq">
+			<legend>Identificação</legend>
+			<div class="divLinha">
+			<label for="nome" class="colPri">Nome:</label><input type="text" id="nome" name="nome" class="inpGrande" /></div>
+			<div class="divLinha">
+			<label for="email" class="colPri">E-mail:</label><input type="email" id="email" name="email" class="inpGrande"/></div>
+			<div class="divLinha">
+			<fieldset class="fsDir">
+				<legend>Gênero:</legend>
+				<label class="radioBt">
+					<input type="radio" name="sexo" value="m" checked/>Mas
+					<span class="seletorBt"></span>
+				</label>
+				<label class="radioBt">
+					<input type="radio" name="sexo" value="f"/>Fem
+					<span class="seletorBt"></span>
+				</label>
+				<label class="radioBt">
+					<input type="radio" name="sexo" value="o"/>Outro
+					<span class="seletorBt"></span>
+				</label>
+			</fieldset>
+			<label for="endereco" class="colPri">Endereço:</label><textarea type="text" id="endereco" name="endereco" class="impEnder"></textarea></div>
+			<fieldset class="fsDir">
+				<legend>Nascimento:</legend>
+				<input type="number" name="TxtDiaNasc" id="diaNasc" min="1" max="31" value=" " class="numDD" /> /
+				<input type="number" name="TxtMesNasc" id="mesNasc" min="1" max="12" value=" " class="numDD"/> /
+				<input type="number" name="TxtAnoNasc" id="anoNasc" min="1930" max="2001" value="1980"  class="numQD"/>
+			</fieldset>
+			<div class="divLinha">
+				<label for="Telefone" class="colPri">Telefone:</label>
+				<input type="text" id="telefone" onChange="conferetel(this,8);" name="Telefone" />
+			</div>
+			<div class="divLinha">
+				<label for="Celular" class="colPri">Celular:</label>
+				<input type="text" id="celular" onChange="conferetel(this,9);" name="Celular" class="impTelef" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Pagamento</legend>
+			<textarea type="text" name="obspg" readonly class="listaCompras"></textarea>
+			<fieldset  class="fsEsq">
+				<legend>Cartão</legend>
+				<fieldset class="fsEsq">
+					<legend>Bandeira:</legend>
+					<label class="radioBt">
+						<input type="radio" name="cartao" value="visa" checked />Visa
+						<span class="seletorBt"></span>
+					</label>
+					<label class="radioBt">
+						<input type="radio" name="cartao" value="master"/>Master
+						<span class="seletorBt"></span>
+					</label>
+					<label class="radioBt">
+						<input type="radio" name="cartao" value="elo"/>Elo
+						<span class="seletorBt"></span>
+					</label>
+				</fieldset>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<div>
+					<label for="mesVal" class="colPriCompras">Validade:</label>
+					<input type="number" name="TxtmesVal" id="mesVal" min="1" max="12" value="1"  class="numDD"/> /
+					<input type="number" name="TxtanoVal" id="anoVal" min="2019" max="2030" value="2019"  class="numQD"/>
+				</div>
+				<br/>
+				<div>
+					<label for="ncc" class="colPriCompras">Número:</label><input type="text" name="ncc" class="impNCC"/>
+				</div>
+			</fieldset>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<div>
+				<label class="colPriPag" for="valpg">Valor R$ <input type="text" name="valpg" class="impMedio" readonly/></label>
+			</div>
+		</fieldset>
+		<div class="botoes">
+			<input type="submit" value="enviar"/>
+			<input type="reset" value="limpar"/>
+		</div>
+	</form>
+</section>
+</body>
+</html>
