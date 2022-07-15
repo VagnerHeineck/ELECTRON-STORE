@@ -1,0 +1,35 @@
+// **** Script for PRODUCTS.HTML
+var tabcamisas=new Array();
+tabProduct[0]=["Protoboard","G","100"];
+tabProduct[1]=['Led_Azul','P','70'];
+tabProduct[2]=['Led_Vermelho','P','70'];
+tabProduct[3]=['Led_Verde','P','70'];
+tabProduct[4]=['Capacitor_Ceramico','pF','30'];
+tabProduct[5]=['Capacitor_Eletrolitico','nF','20'];
+
+function mostra(indice){
+  var foto = document.getElementById("fotocad");
+  var tamanho = document.getElementById("tamanhocad");
+  var preco = document.getElementById("precocad");
+
+  foto.src = tabProduct[indice][0]+".jpg";
+  tamanho.innerHTML = "Tamanhos: " + tabProduct[indice][1];
+  preco.innerHTML = "Preço: R$ " + tabProduct[indice][2]; + ",00";
+}
+
+// **** Script para a página LABPRODUCTS.HTML
+var tablab = new Array();
+
+tablab[0] =['Oscilloscope (Minipa)','Minipa_Oscilloscope','110/220','1200'];
+tablab[1] =['Oscilloscope (Hantek)','Hantek_Oscilloscope','110/220','3000'];
+tablab[2] =['DC Supply Power (Minipa)','MINIPA_DCSup','110/220','800'];
+tablab[3] =['Multimeter LCD (Minipa)','MINIPA_MLCD','PILHA/Bateria','80'];
+tablab[4] =['Multimeter Analog (Minipa)','MINIPA_MLANL','Pilha/Bateria','20'];
+tablab[5] =['Multimeter (LUKE)','LUKE_ML','Pilha/BAteria','200'];
+
+function mostramodelos(indice){
+  var janela= window.open('',tablab[indice][0],'location=no,menubar=no,scrollbars=no,status=no,titlebar=no,fulscreen=no,resizable=no,width=350,height=400')
+  with(janela.document){
+    write('<html><head><link href="https://fonts.googleapis.com/css?family=Stoke" rel="stylesheet"><link rel="stylesheet" type="text/css" href="ELECTRON_CSS.CSS"></head><body class="txtpopup"><h2>',tablab[indice][0],'</h2><p><img class="janelapopup" src="',tablab[indice][1],'.jpg"><p>Tamanhos: ',tablab[indice][2],'<p>Preço:',tablab[indice][3],',00<p><input type="button" value="Fechar" onClick="window.close()"</body></html>');
+  }
+}
