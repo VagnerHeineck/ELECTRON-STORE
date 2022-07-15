@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+	<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Stoke" rel="stylesheet">
+		<title>ELECTRON STORE - LAB PRODUCTS</title>
+		<script language=javascript type="text/javascript" src="ELECTRON_Javascript.js"></script>
+		<link rel="stylesheet" type="text/css" href="ELECTRON_CSS.CSS">
+
+</head>
+<body>
+
+<header>
+	<img class="imgLogo" src="Malhama_Topo.png">
+	<address>
+		<font face="liberation,verdana">
+			Rua da Constituição, 123 
+			<br/>
+			Tel: (21) 91234-5678 
+			<br/>
+			<a href="mailto:contact@elektron.com.br">contact@elektron.com.br</a>
+			<br/>
+		</font>
+	</address>
+</header>
+<br/>
+<nav>
+	<ul  class="menu">
+		<li class="botão">
+			<a target="_blank" href="MAIN_PAGE.HTML">MAIN PAGE</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="LABPRODUCTS.HTML">LAB PRODUCTS</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="PRODUCTS.HTML">PRODUCTS</a>
+		</li>
+		<li class="botão">
+			<a target="_blank" href="BUY.HTML">BUY</a>
+		</li>
+	</ul>
+</nav>
+<section>
+	<p>
+	<h3>LAB PRODUCTS</h3>
+	<ol class="Products list">
+		<li>Oscilloscopes:
+			<ul>
+				<li><a href="javascript:mostramodelos(0);"><img src="OSC01.png"></a></li>
+				<li><a href="javascript:mostramodelos(1);"><img src="OSC02.png"></a></a></li>
+			</ul>
+		<li>DC POWER SUPPLY:
+			<ul>
+				<li><a href="javascript:mostramodelos(2);"><img src="DCPWR01.png"></a></li>
+			</ul>
+		<li>MULTIMETER:
+			<ul>
+				<li><a href="javascript:mostramodelos(3);"><img src="MULTM01.png"></a></li>
+				<li><a href="javascript:mostramodelos(4);"><img src="MULTM02.png"></a></li>
+				<li><a href="javascript:mostramodelos(5);"><img src="MULTM03.png"></a></li>
+			</ul>
+	</ol>
+</section>
+</body>
+</html>
